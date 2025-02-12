@@ -1,7 +1,7 @@
 {
   autoGroups = {
     highlight_yank = { };
-    vim_enter = { };
+    # vim_enter = { };
     indentscope = { };
     restore_cursor = { };
   };
@@ -19,18 +19,20 @@
         '';
       };
     }
-    {
-      group = "vim_enter";
-      event = [ "VimEnter" ];
-      pattern = "*";
-      callback = {
-        __raw = ''
-          function()
-            vim.cmd('Startup')
-          end
-        '';
-      };
-    }
+    /*
+      {
+        group = "vim_enter";
+        event = [ "VimEnter" ];
+        pattern = "*";
+        callback = {
+          __raw = ''
+            function()
+              vim.cmd('Startup')
+            end
+          '';
+        };
+      }
+    */
     {
       group = "indentscope";
       event = [ "FileType" ];
@@ -38,6 +40,8 @@
         "help"
         "Startup"
         "startup"
+        "Alpha"
+        "alpha"
         "neo-tree"
         "Trouble"
         "trouble"

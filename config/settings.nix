@@ -29,7 +29,13 @@
       updatetime = 50;
       colorcolumn = "80";
 
+      # cmdheight = 0;
+
       termguicolors = true;
+
+      fillchars = {
+        eob = " ";
+      };
     };
   };
 }

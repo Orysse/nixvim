@@ -2,17 +2,17 @@ _: {
   imports = [
     ./settings.nix
     ./keymaps.nix
-    # ./auto_cmd.nix
+    ./auto_cmd.nix
     # ./file_types.nix
 
     ./plugins/themes/catppuccin.nix
 
     ./plugins/cmp/autopairs.nix
-    # ./plugins/cmp/blink.nix
     ./plugins/cmp/cmp.nix
     ./plugins/cmp/lspkind.nix
 
     ./plugins/editor/illuminate.nix
+    ./plugins/editor/comment.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/todo-comments.nix
@@ -26,9 +26,12 @@ _: {
 
     ./plugins/snippets/luasnip.nix
 
+    ./plugins/ui/alpha.nix
     ./plugins/ui/bufferline.nix
+    ./plugins/ui/fidget.nix
     ./plugins/ui/lualine.nix
-    ./plugins/ui/startup.nix
+    # ./plugins/ui/startup.nix
+    # ./plugins/ui/smear-cursor.nix
 
     ./plugins/utils/telescope.nix
     ./plugins/utils/whichkey.nix

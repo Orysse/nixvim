@@ -1,7 +1,28 @@
 {
-    globals.mapleader = " ";
+  globals.mapleader = " ";
 
-    keymaps = [
+  keymaps = [
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>y";
+      action = "[[\"+y]]";
+      options = {
+        desc = "next greatest remap ever : asbjornHaland";
+      };
+    }
+    {
+      mode = [
+        "n"
+      ];
+      key = "<leader>Y";
+      action = "[[\"+Y]]";
+      options = {
+        desc = "next greatest remap ever : asbjornHaland";
+      };
+    }
     {
       mode = "n";
       key = "<A-j>";
@@ -114,5 +135,5 @@
         desc = "Open Oil";
       };
     }
-    ];
+  ];
 }
