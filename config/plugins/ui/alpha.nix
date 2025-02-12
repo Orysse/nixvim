@@ -53,7 +53,7 @@
             }
             {
               type = "padding";
-              val = 2;
+              val = 1;
             }
             {
               type = "button";
@@ -78,7 +78,7 @@
             }
             {
               type = "padding";
-              val = 2;
+              val = 1;
             }
             {
               type = "button";
@@ -104,7 +104,7 @@
             }
             {
               type = "padding";
-              val = 2;
+              val = 1;
             }
             {
               type = "button";
@@ -130,7 +130,7 @@
             }
             {
               type = "padding";
-              val = 2;
+              val = 1;
             }
             {
               type = "button";
@@ -156,7 +156,7 @@
             }
             {
               type = "padding";
-              val = 2;
+              val = 1;
             }
             {
               opts = {

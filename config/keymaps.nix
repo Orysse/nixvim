@@ -8,7 +8,7 @@
         "v"
       ];
       key = "<leader>y";
-      action = "[[\"+y]]";
+      action = "\"+y";
       options = {
         desc = "next greatest remap ever : asbjornHaland";
       };
@@ -18,7 +18,7 @@
         "n"
       ];
       key = "<leader>Y";
-      action = "[[\"+Y]]";
+      action = "\"+Y";
       options = {
         desc = "next greatest remap ever : asbjornHaland";
       };

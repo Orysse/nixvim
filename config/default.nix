@@ -3,7 +3,7 @@ _: {
     ./settings.nix
     ./keymaps.nix
     ./auto_cmd.nix
-    # ./file_types.nix
+    ./file_types.nix
 
     ./plugins/themes/catppuccin.nix
 
