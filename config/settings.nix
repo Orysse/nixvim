@@ -29,7 +29,7 @@
       updatetime = 50;
       colorcolumn = "80";
 
-      # cmdheight = 0;
+      cmdheight = 0;
 
       termguicolors = true;
 
