@@ -22,6 +22,7 @@
         };
         hls = {
           enable = true;
+          installGhc = false;
         };
         clangd = {
           enable = true;
