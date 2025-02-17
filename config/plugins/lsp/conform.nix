@@ -138,6 +138,9 @@
           alejandra = {
             command = "${lib.getExe pkgs.alejandra}";
           };
+          ormolu = {
+            command = "${lib.getExe pkgs.ormolu}";
+          };
           jq = {
             command = "${lib.getExe pkgs.jq}";
           };

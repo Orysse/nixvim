@@ -20,6 +20,9 @@
         lua_ls = {
           enable = true;
         };
+        hls = {
+          enable = true;
+        };
         clangd = {
           enable = true;
         };
