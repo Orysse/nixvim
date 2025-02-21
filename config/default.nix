@@ -12,18 +12,19 @@ _: {
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/schemastore.nix
 
-    ./plugins/editor/flash.nix
-    ./plugins/editor/undotree.nix
     ./plugins/editor/comment.nix
+    ./plugins/editor/flash.nix
+    ./plugins/editor/indent-blankline.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
+    ./plugins/editor/undotree.nix
 
     ./plugins/git/lazygit.nix
     ./plugins/git/gitsigns.nix
 
-    ./plugins/lsp/lsp.nix
     ./plugins/lsp/conform.nix
+    ./plugins/lsp/lsp.nix
 
     ./plugins/snippets/luasnip.nix
 
@@ -32,10 +33,10 @@ _: {
     ./plugins/ui/fidget.nix
     ./plugins/ui/lualine.nix
 
-    ./plugins/utils/telescope.nix
-    ./plugins/utils/whichkey.nix
-    ./plugins/utils/snacks.nix
     ./plugins/utils/mini.nix
+    ./plugins/utils/snacks.nix
+    ./plugins/utils/telescope.nix
     ./plugins/utils/web-devicons.nix
+    ./plugins/utils/whichkey.nix
   ];
 }
