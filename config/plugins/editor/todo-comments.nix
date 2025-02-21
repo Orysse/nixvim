@@ -27,5 +27,11 @@ _: {
         ];
       };
     };
+    keymaps = {
+      todoTelescope = {
+        key = "<leader>st";
+        keywords = [ "TODO" ];
+      };
+    };
   };
 }

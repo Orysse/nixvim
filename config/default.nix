@@ -12,11 +12,9 @@ _: {
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/schemastore.nix
 
-    ./plugins/editor/illuminate.nix
     ./plugins/editor/flash.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/comment.nix
-    ./plugins/editor/indent-blankline.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
@@ -33,8 +31,6 @@ _: {
     ./plugins/ui/bufferline.nix
     ./plugins/ui/fidget.nix
     ./plugins/ui/lualine.nix
-    # ./plugins/ui/startup.nix
-    # ./plugins/ui/smear-cursor.nix
 
     ./plugins/utils/telescope.nix
     ./plugins/utils/whichkey.nix
