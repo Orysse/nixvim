@@ -10,8 +10,13 @@ _: {
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/cmp.nix
     ./plugins/cmp/lspkind.nix
+    ./plugins/cmp/schemastore.nix
 
     ./plugins/editor/illuminate.nix
+    ./plugins/editor/flash.nix
+    ./plugins/editor/navic.nix
+    ./plugins/editor/snacks.nix
+    ./plugins/editor/undotree.nix
     ./plugins/editor/comment.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/oil.nix
