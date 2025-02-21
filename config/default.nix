@@ -14,7 +14,6 @@ _: {
 
     ./plugins/editor/illuminate.nix
     ./plugins/editor/flash.nix
-    ./plugins/editor/navic.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/comment.nix
     ./plugins/editor/indent-blankline.nix
