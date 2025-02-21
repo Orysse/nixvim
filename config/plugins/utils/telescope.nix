@@ -11,7 +11,6 @@
     };
     settings = {
       defaults = {
-        initial_mode = "normal";
         layout_config = {
           horizontal = {
             prompt_position = "top";

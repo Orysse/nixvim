@@ -1,5 +1,5 @@
 {
-  animated = {
+  animate = {
     enabled = true;
   };
   notifier = {

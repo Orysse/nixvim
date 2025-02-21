@@ -15,7 +15,6 @@ _: {
     ./plugins/editor/illuminate.nix
     ./plugins/editor/flash.nix
     ./plugins/editor/navic.nix
-    ./plugins/editor/snacks.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/comment.nix
     ./plugins/editor/indent-blankline.nix
@@ -40,6 +39,7 @@ _: {
 
     ./plugins/utils/telescope.nix
     ./plugins/utils/whichkey.nix
+    ./plugins/utils/snacks.nix
     ./plugins/utils/mini.nix
     ./plugins/utils/web-devicons.nix
   ];
