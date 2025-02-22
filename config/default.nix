@@ -27,6 +27,7 @@ _: {
     ./plugins/lsp/lsp.nix
 
     ./plugins/snippets/luasnip.nix
+    ./plugins/snippets/friendly-snippets.nix
 
     ./plugins/ui/alpha.nix
     ./plugins/ui/bufferline.nix

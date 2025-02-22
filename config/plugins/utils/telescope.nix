@@ -164,6 +164,12 @@
           desc = "Colorscheme preview";
         };
       };
+      "<leader>fs" = {
+        action = "lsp_document_symbols";
+        options = {
+          desc = "select symbols in a document";
+        };
+      };
     };
   };
   keymaps = [
