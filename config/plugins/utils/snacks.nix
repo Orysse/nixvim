@@ -5,10 +5,6 @@
       animate = {
         enabled = true;
       };
-      notifier = {
-        enabled = true;
-        timeout = 3000;
-      };
       quickfile = {
         enabled = false;
       };
