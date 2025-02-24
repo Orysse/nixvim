@@ -14,9 +14,6 @@
       enable = true;
       inlayHints = true;
       servers = {
-        html = {
-          enable = true;
-        };
         lua_ls = {
           enable = true;
         };
@@ -27,16 +24,12 @@
         clangd = {
           enable = true;
         };
-        jdtls = {
-          enable = true;
-        };
+        /*
+          jdtls = {
+            enable = true;
+          };
+        */
         nil_ls = {
-          enable = true;
-        };
-        ts_ls = {
-          enable = true;
-        };
-        marksman = {
           enable = true;
         };
         pyright = {
