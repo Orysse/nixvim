@@ -21,6 +21,9 @@
           enable = true;
           installGhc = false;
         };
+        cmake = {
+          enable = true;
+        };
         clangd = {
           enable = true;
         };
