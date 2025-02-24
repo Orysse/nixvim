@@ -39,6 +39,8 @@
       scrolloff = 6;
       signcolumn = "yes";
 
+      timeoutlen = 300;
+
       updatetime = 50;
       colorcolumn = "80";
 

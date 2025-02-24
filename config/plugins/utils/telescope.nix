@@ -44,12 +44,6 @@
           desc = "Find project files";
         };
       };
-      "<leader>fr" = {
-        action = "live_grep";
-        options = {
-          desc = "Find text";
-        };
-      };
       "<leader>fR" = {
         action = "resume";
         options = {
