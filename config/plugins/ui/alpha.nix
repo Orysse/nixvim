@@ -134,14 +134,39 @@
             }
             {
               type = "button";
-              val = "      Quit Neovim    ";
+              val = "      open pubby    ";
+              on_press.__raw = "function() vim.cmd[[!firefox https://pubby.club/~/cisco]] end";
+              opts = {
+                shortcut = "p";
+                keymap = [
+                  "n"
+                  "p"
+                  "<cmd>!firefox https://pubby.club/~/cisco & disown<cr><cr>"
+                  {
+                    noremap = true;
+                    silent = true;
+                  }
+                ];
+                position = "center";
+                width = 50;
+                align_shortcut = "right";
+                hl_shortcut = "keyword";
+              };
+            }
+            {
+              type = "padding";
+              val = 1;
+            }
+            {
+              type = "button";
+              val = "      quit neovim    ";
               on_press.__raw = "function() vim.cmd[[qa]] end";
               opts = {
                 shortcut = "q";
                 keymap = [
                   "n"
                   "q"
-                  "<cmd>qa<CR>"
+                  "<cmd>qa<cr>"
                   {
                     noremap = true;
                     silent = true;
@@ -151,7 +176,7 @@
                 position = "center";
                 width = 50;
                 align_shortcut = "right";
-                hl_shortcut = "Keyword";
+                hl_shortcut = "keyword";
               };
             }
             {
@@ -164,7 +189,7 @@
                 position = "center";
               };
               type = "text";
-              val = "https://pubby.club/~/cisco";
+              val = "Bottom text";
             }
           ];
         }
