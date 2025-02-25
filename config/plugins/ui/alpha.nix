@@ -134,6 +134,31 @@
             }
             {
               type = "button";
+              val = "   󰇥   Goto Scrooge (Monster Maxxing 🤫 🧏 🗿)";
+              on_press.__raw = "function() vim.cmd[[!firefox https://grossistants.fr]] end";
+              opts = {
+                shortcut = "s";
+                keymap = [
+                  "n"
+                  "s"
+                  "<cmd>!firefox https://grossistants.fr & disown<cr><cr>"
+                  {
+                    noremap = true;
+                    silent = true;
+                  }
+                ];
+                position = "center";
+                width = 50;
+                align_shortcut = "right";
+                hl_shortcut = "keyword";
+              };
+            }
+            {
+              type = "padding";
+              val = 1;
+            }
+            {
+              type = "button";
               val = "      open pubby    ";
               on_press.__raw = "function() vim.cmd[[!firefox https://pubby.club/~/cisco]] end";
               opts = {
@@ -189,7 +214,7 @@
                 position = "center";
               };
               type = "text";
-              val = "Bottom text";
+              val = "🔞 🥵 🍑 👉👌";
             }
           ];
         }
