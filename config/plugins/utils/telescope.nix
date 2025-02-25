@@ -1,11 +1,15 @@
 {
   plugins.telescope = {
     enable = true;
+    highlightTheme = "Catppuccin Macchiato";
     extensions = {
       file-browser = {
         enable = true;
       };
       fzf-native = {
+        enable = true;
+      };
+      ui-select = {
         enable = true;
       };
     };
@@ -173,6 +177,14 @@
       action = "<cmd>Telescope diagnostics bufnr=0<cr>";
       options = {
         desc = "Document diagnostics";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ca";
+      action = "<cmd>lua vim.lsp.buf.code_action()<cr>";
+      options = {
+        desc = "Code actions";
       };
     }
     {
