@@ -28,14 +28,15 @@ _: {
     ./plugins/lsp/lsp.nix
 
     ./plugins/snippets/luasnip.nix
-    ./plugins/snippets/friendly-snippets.nix
+    # ./plugins/snippets/friendly-snippets.nix
 
-    ./plugins/ui/alpha.nix
+    # ./plugins/ui/alpha.nix
     ./plugins/ui/bufferline.nix
     ./plugins/ui/notify.nix
     ./plugins/ui/lualine.nix
 
     ./plugins/utils/mini.nix
+    ./plugins/utils/snacks.nix
     ./plugins/utils/telescope.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix

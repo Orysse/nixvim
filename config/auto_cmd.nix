@@ -26,6 +26,8 @@
         "startup"
         "Alpha"
         "alpha"
+        "Dashboard"
+        "dashboard"
         "neo-tree"
         "Trouble"
         "trouble"
