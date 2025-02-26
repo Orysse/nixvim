@@ -8,15 +8,24 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = false;
+          ghost_text = true;
         };
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
           maxViewEntries = 30;
         };
+        window = {
+          completion = {
+            border = "rounded";
+            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
+          };
+          documentation = {
+            border = "rounded";
+          };
+        };
         snippet = {
-          expand = "luasnip";
+          expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         };
         formatting = {
           fields = [
@@ -43,26 +52,59 @@
             keywordLength = 3;
           }
         ];
-
-        window = {
-          completion = {
-            border = "solid";
-          };
-          documentation = {
-            border = "solid";
-          };
-        };
-
         mapping = {
-          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-          "<C-j>" = "cmp.mapping.select_next_item()";
-          "<C-k>" = "cmp.mapping.select_prev_item()";
-          "<C-e>" = "cmp.mapping.abort()";
-          "<C-b>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-f>" = "cmp.mapping.scroll_docs(4)";
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
+          __raw = ''
+            cmp.mapping.preset.insert({
+              ['<C-j>'] = cmp.mapping.select_next_item(),
+              ['<C-k>'] = cmp.mapping.select_prev_item(),
+              ['<C-e>'] = cmp.mapping.abort(),
+
+              ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+
+              ['<C-f>'] = cmp.mapping.scroll_docs(4),
+
+              ['<C-Space>'] = cmp.mapping.complete(),
+
+              ['<S-CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+
+              -- Taken from https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
+              -- to stop interference between cmp and luasnip
+
+              ['<CR>'] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        if luasnip.expandable() then
+                            luasnip.expand()
+                        else
+                            cmp.confirm({
+                                select = true,
+                            })
+                        end
+                    else
+                        fallback()
+                    end
+                end),
+
+              ["<Tab>"] = cmp.mapping(function(fallback)
+                if cmp.visible() then
+                  cmp.select_next_item()
+                elseif luasnip.locally_jumpable(1) then
+                  luasnip.jump(1)
+                else
+                  fallback()
+                end
+              end, { "i", "s" }),
+
+              ["<S-Tab>"] = cmp.mapping(function(fallback)
+                if cmp.visible() then
+                  cmp.select_prev_item()
+                elseif luasnip.locally_jumpable(-1) then
+                  luasnip.jump(-1)
+                else
+                  fallback()
+                end
+              end, { "i", "s" }),
+            })
+          '';
         };
       };
     };
@@ -83,36 +125,36 @@
     }; # autocomplete for cmdline
   };
   extraConfigLua = ''
-        luasnip = require("luasnip")
-        kind_icons = {
-          Text = "󰊄",
-          Method = " ",
-          Function = "󰡱 ",
-          Constructor = " ",
-          Field = " ",
-          Variable = "󱀍 ",
-          Class = " ",
-          Interface = " ",
-          Module = "󰕳 ",
-          Property = " ",
-          Unit = " ",
-          Value = " ",
-          Enum = " ",
-          Keyword = " ",
-          Snippet = " ",
-          Color = " ",
-          File = "",
-          Reference = " ",
-          Folder = " ",
-          EnumMember = " ",
-          Constant = " ",
-          Struct = " ",
-          Event = " ",
-          Operator = " ",
-          TypeParameter = " ",
-        } 
+     luasnip = require("luasnip")
+     kind_icons = {
+       Text = "󰊄",
+       Method = " ",
+       Function = "󰡱 ",
+       Constructor = " ",
+       Field = " ",
+       Variable = "󱀍 ",
+       Class = " ",
+       Interface = " ",
+       Module = "󰕳 ",
+       Property = " ",
+       Unit = " ",
+       Value = " ",
+       Enum = " ",
+       Keyword = " ",
+       Snippet = " ",
+       Color = " ",
+       File = "",
+       Reference = " ",
+       Folder = " ",
+       EnumMember = " ",
+       Constant = " ",
+       Struct = " ",
+       Event = " ",
+       Operator = " ",
+       TypeParameter = " ",
+     } 
 
-         local cmp = require'cmp'
+     local cmp = require'cmp'
 
      -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
      cmp.setup.cmdline({'/', "?" }, {
