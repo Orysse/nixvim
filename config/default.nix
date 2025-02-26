@@ -24,6 +24,7 @@ _: {
     ./plugins/git/gitsigns.nix
 
     ./plugins/lsp/conform.nix
+    ./plugins/lsp/fidget.nix
     ./plugins/lsp/lsp.nix
 
     ./plugins/snippets/luasnip.nix
@@ -31,11 +32,10 @@ _: {
 
     ./plugins/ui/alpha.nix
     ./plugins/ui/bufferline.nix
-    ./plugins/ui/fidget.nix
+    ./plugins/ui/notify.nix
     ./plugins/ui/lualine.nix
 
     ./plugins/utils/mini.nix
-    ./plugins/utils/snacks.nix
     ./plugins/utils/telescope.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix

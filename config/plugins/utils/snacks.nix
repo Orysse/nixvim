@@ -12,6 +12,12 @@
         debounce = 100;
         enabled = true;
       };
+      notify = {
+        enabled = true;
+      };
+      notifier = {
+        enabled = true;
+      };
     };
   };
 }

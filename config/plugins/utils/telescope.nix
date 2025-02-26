@@ -11,16 +11,43 @@
       };
       ui-select = {
         enable = true;
+        settings = {
+          __unkeyed-1.__raw = ''require("telescope.themes").get_dropdown{}'';
+        };
+      };
+      undo = {
+        enable = true;
       };
     };
     settings = {
       defaults = {
+        prompt_prefix = "  ";
+        selection_caret = "❯  ";
+        path_display = [
+          "truncate"
+        ];
+        sorting_strategy = "ascending";
         layout_config = {
           horizontal = {
             prompt_position = "top";
+            preview_width = 0.55;
           };
+          vertical = {
+            mirror = false;
+          };
+          width = 0.87;
+          height = 0.80;
+          preview_cutoff = 120;
         };
-        sorting_strategy = "ascending";
+        file_ignore_patterns = [
+          "^.git/"
+          "^.mypy_cache/"
+          "^__pycache__/"
+          "^output/"
+          "^data/"
+          "%.ipynb"
+        ];
+        set_env.COLORTERM = "truecolor";
       };
       extensions = {
         fuzzy = true;
@@ -171,6 +198,22 @@
     };
   };
   keymaps = [
+    {
+      mode = "n";
+      key = "<leader>su";
+      action = "<cmd>Telescope undo<cr>";
+      options = {
+        desc = "Undo history";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>sn";
+      action = "<cmd>Telescope notify<cr>";
+      options = {
+        desc = "Notify history";
+      };
+    }
     {
       mode = "n";
       key = "<leader>sd";
