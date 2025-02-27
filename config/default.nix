@@ -24,7 +24,6 @@ _: {
     ./plugins/git/gitsigns.nix
 
     ./plugins/lsp/conform.nix
-    ./plugins/lsp/cmake-tools.nix
     ./plugins/lsp/fidget.nix
     ./plugins/lsp/lsp.nix
 
