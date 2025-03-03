@@ -18,4 +18,19 @@
       command = "set ft=terraform";
     }
   ];
+
+  files."ftdetect/tigerft.lua".autoCmd = [
+    {
+      group = "filetypes";
+      event = [
+        "BufRead"
+        "BufNewFile"
+      ];
+      pattern = [
+        "*.tig"
+        "*.tih"
+      ];
+      command = "set ft=tiger";
+    }
+  ];
 }

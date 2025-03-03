@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, tree-sitter-tiger, ... }:
 {
   plugins.treesitter = {
     enable = true;
@@ -8,7 +8,9 @@
     };
     folding = false;
     nixvimInjections = true;
-    grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
+    grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars ++ [
+      # tree-sitter-tiger
+    ];
   };
 
   plugins.treesitter-textobjects = {
