@@ -47,11 +47,11 @@
             "--fallback-style=llvm"
           ];
         };
-        /*
-          jdtls = {
-            enable = true;
-          };
-        */
+
+        jdtls = {
+          enable = true;
+        };
+
         nil_ls = {
           enable = true;
         };
