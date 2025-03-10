@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  enableJdtls ? false,
+  ...
+}:
 {
   plugins = {
     lsp-lines = {
@@ -47,11 +51,9 @@
             "--fallback-style=llvm"
           ];
         };
-
-        jdtls = {
+        jdtls = pkgs.lib.mkIf enableJdtls {
           enable = true;
         };
-
         nil_ls = {
           enable = true;
         };

@@ -34,21 +34,26 @@
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
-          nixvimModule = {
-            inherit system; # or alternatively, set `pkgs`
-            module = import ./config; # import the module directly
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
+          baseNixvimModule = {
+            inherit system;
+            module = import ./config;
             extraSpecialArgs = {
-              # inherit (inputs) foo;
-              inherit (inputs) tree-sitter-tiger;
             };
           };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
+          aiNixvimModule = {
+            inherit system;
+            module = import ./config;
+            extraSpecialArgs = {
+              aiEnabled = true;
+            };
+          };
+          nvim = nixvim'.makeNixvimWithModule baseNixvimModule;
+          nvimAi = nixvim'.makeNixvimWithModule aiNixvimModule;
         in
         {
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+            default = nixvimLib.check.mkTestDerivationFromNixvimModule baseNixvimModule;
           };
 
           formatter = pkgs.nixfmt-rfc-style;
@@ -56,6 +61,7 @@
           packages = {
             # Lets you run `nix run .` to start nixvim
             default = nvim;
+            withAi = nvimAi;
           };
         };
     };
