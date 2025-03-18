@@ -1,14 +1,9 @@
-{
-  pkgs,
-  aiEnabled ? false,
-  ...
-}:
-{
-  plugins.copilot-chat = pkgs.lib.mkIf aiEnabled {
+_: {
+  plugins.copilot-chat = {
     enable = true;
   };
 
-  keymaps = pkgs.lib.mkIf aiEnabled [
+  keymaps = [
     {
       key = "<leader>ct";
       action = "<CMD>CopilotChatToggle<CR>";

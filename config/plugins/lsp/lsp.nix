@@ -1,6 +1,5 @@
 {
   pkgs,
-  enableJdtls ? false,
   ...
 }:
 {
@@ -51,9 +50,11 @@
             "--fallback-style=llvm"
           ];
         };
-        jdtls = pkgs.lib.mkIf enableJdtls {
-          enable = true;
-        };
+        /*
+          jdtls = {
+            enable = true;
+          };
+        */
         nil_ls = {
           enable = true;
         };

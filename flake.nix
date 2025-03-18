@@ -42,7 +42,7 @@
           };
           aiNixvimModule = {
             inherit system;
-            module = import ./config;
+            module = import ./config ./config/plugins/ai;
             extraSpecialArgs = {
               aiEnabled = true;
             };
