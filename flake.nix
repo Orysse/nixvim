@@ -53,11 +53,7 @@
             };
           };
           nvim = nixvim'.makeNixvimWithModule baseNixvimModule;
-<<<<<<< Updated upstream
           nvimAi = nixvim'.makeNixvimWithModule aiNixvimModule;
-=======
-          nvimAi = nixvim'.makeNixvimWithModule nixvimModuleWithAI;
->>>>>>> Stashed changes
         in
         {
           checks = {
