@@ -8,7 +8,7 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = false;
+          ghost_text = true;
         };
         performance = {
           debounce = 60;
@@ -128,7 +128,7 @@
   extraConfigLua = ''
      luasnip = require("luasnip")
      kind_icons = {
-       Text = "󰊄",
+       Text = "󰊄 ",
        Method = " ",
        Function = "󰡱 ",
        Constructor = " ",
@@ -144,7 +144,7 @@
        Keyword = " ",
        Snippet = " ",
        Color = " ",
-       File = "",
+       File = " ",
        Reference = " ",
        Folder = " ",
        EnumMember = " ",
