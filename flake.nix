@@ -42,7 +42,7 @@
           };
           aiNixvimModule = {
             inherit system;
-            module = import ./config ./config/plugins/ai;
+            module = import ./config ./config/plugins/other/cmp-copilot.nix;
             extraSpecialArgs = {
               aiEnabled = true;
             };

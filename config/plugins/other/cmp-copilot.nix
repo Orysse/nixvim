@@ -1,4 +1,20 @@
-_: {
+{
+  plugins.copilot-cmp = {
+    enable = true;
+  };
+  plugins.copilot-lua = {
+    settings = {
+      copilot = {
+        suggestion = {
+          enabled = false;
+        };
+        panel = {
+          enabled = false;
+        };
+      };
+    };
+  };
+
   plugins.copilot-chat = {
     enable = true;
   };
@@ -35,4 +51,11 @@ _: {
       options.desc = "Add tests for my code";
     }
   ];
+
+  extraConfigLua = ''
+    require("copilot").setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+  '';
 }
