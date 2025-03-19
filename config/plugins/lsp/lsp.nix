@@ -1,5 +1,6 @@
 {
   pkgs,
+  system,
   ...
 }:
 {
@@ -55,7 +56,7 @@
             enable = true;
           };
         */
-        nil_ls = {
+        nixd = {
           enable = true;
         };
         ts_ls = {

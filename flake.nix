@@ -38,6 +38,7 @@
             inherit system;
             module = import ./config;
             extraSpecialArgs = {
+              inherit system;
             };
           };
           aiNixvimModule = {
@@ -49,7 +50,7 @@
               ];
             };
             extraSpecialArgs = {
-              aiEnabled = true;
+              inherit system;
             };
           };
           nvim = nixvim'.makeNixvimWithModule baseNixvimModule;
