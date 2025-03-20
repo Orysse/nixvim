@@ -19,6 +19,7 @@ _: {
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
     ./plugins/editor/undotree.nix
+    # ./plugins/editor/vimpair.nix
 
     ./plugins/git/lazygit.nix
     ./plugins/git/gitsigns.nix

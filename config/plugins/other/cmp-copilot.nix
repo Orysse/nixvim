@@ -1,4 +1,4 @@
-{
+/* {
   plugins.copilot-cmp = {
     enable = true;
   };
@@ -58,4 +58,4 @@
       panel = { enabled = false },
     })
   '';
-}
+} */
