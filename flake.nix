@@ -38,23 +38,8 @@
               inherit system;
             };
           };
-          /*
-            aiNixvimModule = {
-              inherit system;
-              module = {
-                imports = [
-                  ./config
-                  ./config/plugins/other/cmp-copilot.nix
-                ];
-              };
-              extraSpecialArgs = {
-                inherit system;
-              };
-            };
-          */
           nvimBase = nixvim'.makeNixvimWithModule baseNixvimModule;
         in
-        # nvimAi = nixvim'.makeNixvimWithModule aiNixvimModule;
         {
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
@@ -67,7 +52,6 @@
             # Lets you run `nix run .` to start nixvim
             nvim = nvimBase;
             default = nvimBase;
-            # withAi = nvimAi;
           };
         };
     };

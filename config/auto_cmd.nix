@@ -3,7 +3,6 @@
     highlight_yank = { };
     indentscope = { };
   };
-
   autoCmd = [
     {
       group = "highlight_yank";
