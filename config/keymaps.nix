@@ -135,57 +135,5 @@
         desc = "Open Oil";
       };
     }
-    {
-      mode = [
-        "n"
-        "v"
-        "i"
-      ];
-      key = "<UP>";
-      action = "<NOP>";
-      options = {
-        noremap = true;
-        silent = true;
-      };
-    }
-    {
-      mode = [
-        "n"
-        "v"
-        "i"
-      ];
-      key = "<DOWN>";
-      action = "<NOP>";
-      options = {
-        noremap = true;
-        silent = true;
-      };
-    }
-    {
-      mode = [
-        "n"
-        "v"
-        "i"
-      ];
-      key = "<LEFT>";
-      action = "<NOP>";
-      options = {
-        noremap = true;
-        silent = true;
-      };
-    }
-    {
-      mode = [
-        "n"
-        "v"
-        "i"
-      ];
-      key = "<RIGHT>";
-      action = "<NOP>";
-      options = {
-        noremap = true;
-        silent = true;
-      };
-    }
   ];
 }
