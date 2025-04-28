@@ -62,6 +62,12 @@
         ts_ls = {
           enable = true;
         };
+        eslint = {
+          enable = true;
+          extraOptions.settings = {
+            workingDirectories.mode = "auto";
+          };
+        };
         pyright = {
           enable = true;
         };

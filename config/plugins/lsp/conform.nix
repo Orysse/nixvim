@@ -40,6 +40,17 @@
           bang = true,
         })
       '';
+    plugins.lint.lintersByFt = {
+      javascript = [ "eslint_d" ];
+      javascriptreact = [ "eslint_d" ];
+      "javascript.jsx" = [ "eslint_d" ];
+      typescript = [ "eslint_d" ];
+      typescriptreact = [ "eslint_d" ];
+      "typescript.txs" = [ "eslint_d" ];
+      vue = [ "eslint_d" ];
+      svelte = [ "eslint_d" ];
+      astro = [ "eslint_d" ];
+    };
     plugins.conform-nvim = {
       enable = true;
       settings = {
