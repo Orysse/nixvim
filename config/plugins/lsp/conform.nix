@@ -89,12 +89,12 @@
             stop_after_first = true;
           };
           javascript = {
-            __unkeyed-1 = "prettierd";
+            __unkeyed-1 = "eslint_d";
             __unkeyed-2 = "prettier";
             stop_after_first = true;
           };
           typescript = {
-            __unkeyed-1 = "prettierd";
+            __unkeyed-1 = "eslint_d";
             __unkeyed-2 = "prettier";
             stop_after_first = true;
           };
@@ -146,6 +146,12 @@
           };
           prettierd = {
             command = "${lib.getExe pkgs.prettierd}";
+          };
+          prettier = {
+            command = "${lib.getExe pkgs.nodePackages.prettier}";
+          };
+          eslint_d = {
+            command = "${lib.getExe pkgs.eslint_d}";
           };
           stylua = {
             command = "${lib.getExe pkgs.stylua}";
