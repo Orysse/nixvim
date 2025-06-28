@@ -83,9 +83,9 @@
         jsonls = {
           enable = true;
         };
-	ocamllsp {
-	  enable = true;
-	};
+        ocamllsp = {
+          enable = true;
+        };
         helm_ls = {
           enable = true;
           extraOptions = {
