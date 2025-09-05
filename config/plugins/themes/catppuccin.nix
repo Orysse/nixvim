@@ -10,8 +10,17 @@
         custom_highlights = ''
           function(highlights)
             return {
-            CursorLineNr = { fg = highlights.peach, style = {} },
-            NavicText = { fg = highlights.text },
+            NormalFloat = { bg = "NONE" },
+            FloatBorder = { bg = "NONE" },
+            TelescopeNormal = { bg = none },
+            TelescopeBorder = { bg = none },
+            TelescopeTitle = { bg = none },
+            TelescopePromptNormal = { bg = none },
+            TelescopePromptBorder = { bg = none },
+            TelescopeResultsNormal = { bg = none },
+            TelescopeResultsBorder = { bg = none },
+            TelescopePreviewNormal = { bg = none },
+            TelescopePreviewBorder = { bg = none },
             }
           end
         '';
