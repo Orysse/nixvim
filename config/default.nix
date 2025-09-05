@@ -7,6 +7,8 @@ _: {
 
     ./plugins/themes/catppuccin.nix
 
+    # ./plugins/copilot/copilot-chat.nix
+
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/cmp.nix
     ./plugins/cmp/lspkind.nix

@@ -8,7 +8,7 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = true;
+          ghost_text = false;
         };
         performance = {
           debounce = 60;
@@ -38,11 +38,14 @@
           { name = "git"; }
           { name = "nvim_lsp"; }
           { name = "emoji"; }
-          {
-            name = "buffer"; # text within current buffer
-            option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-            keywordLength = 3;
-          }
+          /*
+            {
+              name = "buffer"; # text within current buffer
+              option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+              keywordLength = 3;
+            }
+          */
+          { name = "copilot"; }
           {
             name = "path"; # file system paths
             keywordLength = 3;
@@ -127,7 +130,7 @@
   extraConfigLua = ''
      luasnip = require("luasnip")
      kind_icons = {
-       Text = "󰊄 ",
+       Text = "󰊄",
        Method = " ",
        Function = "󰡱 ",
        Constructor = " ",
@@ -143,7 +146,7 @@
        Keyword = " ",
        Snippet = " ",
        Color = " ",
-       File = " ",
+       File = "",
        Reference = " ",
        Folder = " ",
        EnumMember = " ",
