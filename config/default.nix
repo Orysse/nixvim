@@ -18,6 +18,7 @@ _: {
     ./plugins/editor/flash.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/oil.nix
+    ./plugins/editor/render-markdown.nix
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
     ./plugins/editor/undotree.nix
