@@ -22,6 +22,7 @@ _: {
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
     ./plugins/editor/undotree.nix
+    ./plugins/editor/tmux-navigator.nix
     # ./plugins/editor/vimpair.nix
 
     ./plugins/git/lazygit.nix
@@ -36,6 +37,7 @@ _: {
     ./plugins/ui/bufferline.nix
     ./plugins/ui/notify.nix
     ./plugins/ui/lualine.nix
+    # ./plugins/ui/smear-cursor.nix
 
     ./plugins/utils/mini.nix
     ./plugins/utils/snacks.nix
