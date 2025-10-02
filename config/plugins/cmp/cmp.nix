@@ -8,7 +8,7 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = false;
+          ghost_text = true;
         };
         performance = {
           debounce = 60;
