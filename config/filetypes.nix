@@ -1,9 +1,11 @@
 {
   autoGroups = {
-    filetypes = { };
+    filetypes = {
+      clear = true; # Clear existing autocmds in this group
+    };
   };
 
-  files."ftdetect/terraformft.lua".autoCmd = [
+  autoCmd = [
     {
       group = "filetypes";
       event = [
@@ -12,14 +14,11 @@
       ];
       pattern = [
         "*.tf"
-        " *.tfvars"
-        " *.hcl"
+        "*.tfvars"
+        "*.hcl"
       ];
       command = "set ft=terraform";
     }
-  ];
-
-  files."ftdetect/tigerft.lua".autoCmd = [
     {
       group = "filetypes";
       event = [
