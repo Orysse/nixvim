@@ -1,5 +1,5 @@
 _: {
-  plugins.todo-comments = {
+  plugins.web-devicons = {
     enable = true;
   };
 }

@@ -1,52 +1,14 @@
 _: {
+  # Import all your configuration modules here
   imports = [
     ./settings.nix
     ./keymaps.nix
-    ./auto_cmd.nix
-    ./file_types.nix
+    ./autocmd.nix
 
-    ./plugins/themes/catppuccin.nix
+    ./filetypes.nix
 
-    ./plugins/copilot/copilot-chat.nix
+    ./plugins
 
-    ./plugins/cmp/autopairs.nix
-    ./plugins/cmp/cmp.nix
-    ./plugins/cmp/cmp-copilot.nix
-    ./plugins/cmp/lspkind.nix
-    ./plugins/cmp/schemastore.nix
-
-    ./plugins/editor/comment.nix
-    ./plugins/editor/flash.nix
-    ./plugins/editor/indent-blankline.nix
-    ./plugins/editor/oil.nix
-    ./plugins/editor/render-markdown.nix
-    ./plugins/editor/todo-comments.nix
-    ./plugins/editor/treesitter.nix
-    ./plugins/editor/undotree.nix
-    ./plugins/editor/tmux-navigator.nix
-    # ./plugins/editor/vimpair.nix
-
-    ./plugins/git/lazygit.nix
-    ./plugins/git/gitsigns.nix
-
-    ./plugins/lsp/conform.nix
-    ./plugins/lsp/fidget.nix
-    ./plugins/lsp/lsp.nix
-    ./plugins/lsp/trouble.nix
-
-    ./plugins/snippets/luasnip.nix
-
-    ./plugins/ui/bufferline.nix
-    ./plugins/ui/notify.nix
-    ./plugins/ui/lualine.nix
-    # ./plugins/ui/smear-cursor.nix
-
-    ./plugins/utils/mini.nix
-    ./plugins/utils/snacks.nix
-    ./plugins/utils/telescope.nix
-    ./plugins/utils/web-devicons.nix
-    ./plugins/utils/whichkey.nix
-
-    # AI ⚠️
+    ./themes/catppuccin.nix
   ];
 }

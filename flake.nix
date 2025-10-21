@@ -1,17 +1,17 @@
 {
-  description = "Abel Chartier nixvim configuration";
+  description = "A nixvim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    tree-sitter-tiger.url = "github:ambroisie/tree-sitter-tiger";
   };
 
   outputs =
     {
       nixvim,
       flake-parts,
+      nixpkgs,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -23,35 +23,29 @@
       ];
 
       perSystem =
-        {
-          system,
-          pkgs,
-          ...
-        }:
+        { system, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
-          baseNixvimModule = {
-            inherit system;
-            module = import ./config;
+          nixvimModule = {
+            inherit system; # or alternatively, set `pkgs`
+            module = import ./config; # import the module directly
+            # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
-              inherit system;
+              # inherit (inputs) foo;
             };
           };
-          nvimBase = nixvim'.makeNixvimWithModule baseNixvimModule;
+          nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
         {
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule baseNixvimModule;
+            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
-
-          formatter = pkgs.nixfmt-rfc-style;
 
           packages = {
             # Lets you run `nix run .` to start nixvim
-            nvim = nvimBase;
-            default = nvimBase;
+            default = nvim;
           };
         };
     };

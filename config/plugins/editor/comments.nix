@@ -1,5 +1,5 @@
 _: {
-  plugins.todo-comments = {
+  plugins.comment = {
     enable = true;
   };
 }
