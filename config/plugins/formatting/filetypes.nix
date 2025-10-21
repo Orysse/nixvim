@@ -1,19 +1,11 @@
-_:
-let
-  prettier = {
-    __unkeyed-1 = "prettierd";
-    __unkeyed-2 = "prettier";
-    stop_after_first = true;
-  };
-in
-{
+_: {
   plugins.conform-nvim.settings.formatters_by_ft = {
-    html = prettier;
-    css = prettier;
-    javascript = prettier;
-    typescript = prettier;
-    markdown = prettier;
-    yaml = prettier;
+    html = [ "prettierd" ];
+    css = [ "prettierd" ];
+    javascript = [ "prettierd" ];
+    typescript = [ "prettierd" ];
+    markdown = [ "prettierd" ];
+    yaml = [ "prettierd" ];
     python = [
       "black"
       "isort"
