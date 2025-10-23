@@ -1,35 +1,9 @@
+{ lib, ... }:
 {
-  autoGroups = {
-    filetypes = {
-      clear = true; # Clear existing autocmds in this group
+  filetype = {
+    extension =
+      lib.genAttrs [ "tf" "tfvars" "hcl" ] (_: "terraform") // lib.genAttrs [ "tig" "tih" ] (_: "tiger");
+    pattern = {
     };
   };
-
-  autoCmd = [
-    {
-      group = "filetypes";
-      event = [
-        "BufRead"
-        "BufNewFile"
-      ];
-      pattern = [
-        "*.tf"
-        "*.tfvars"
-        "*.hcl"
-      ];
-      command = "set ft=terraform";
-    }
-    {
-      group = "filetypes";
-      event = [
-        "BufRead"
-        "BufNewFile"
-      ];
-      pattern = [
-        "*.tig"
-        "*.tih"
-      ];
-      command = "set ft=tiger";
-    }
-  ];
 }
