@@ -4,8 +4,9 @@ _: {
     ./flash.nix
     ./mini.nix
     ./render-markdown.nix
-    ./treesitter.nix
+    ./tmux-navigator.nix
     ./todo-comments.nix
+    ./treesitter.nix
     ./undotree.nix
   ];
 }
