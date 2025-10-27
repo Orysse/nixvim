@@ -6,7 +6,7 @@ _: {
     ./image.nix
     ./notifier.nix
     ./picker.nix
-    ./quickfile.nix
+    # ./quickfile.nix
     ./terminal.nix
     ./words.nix
     ./zen.nix
