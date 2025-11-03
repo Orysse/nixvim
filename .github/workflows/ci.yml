@@ -49,27 +49,3 @@ jobs:
       - name: Verify nvim binary
         run: |
           ./result/bin/nvim --version
-
-  build-matrix:
-    name: Build for ${{ matrix.system }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - system: x86_64-linux
-            os: ubuntu-latest
-          - system: aarch64-darwin
-            os: macos-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v13
-
-      - name: Setup Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@v7
-
-      - name: Build nixvim for ${{ matrix.system }}
-        run: nix build .#packages.${{ matrix.system }}.default --show-trace
