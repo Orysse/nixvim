@@ -11,7 +11,7 @@
     settings = {
       picker = {
         enabled = true;
-                formatters = {
+        formatters = {
           file = {
             filename_first = true;
           };
@@ -79,7 +79,7 @@
           action.__raw = "function() Snacks.picker.git_status() end";
           options.desc = "Git status";
         }
-                {
+        {
           mode = "n";
           key = "<leader>gb";
           action.__raw = "function() Snacks.picker.git_branches() end";
