@@ -42,7 +42,7 @@
             ];
           };
 
-          formatter = pkgs.alejandra;
+          formatter = pkgs.nixfmt-rfc-style;
         };
     };
 }

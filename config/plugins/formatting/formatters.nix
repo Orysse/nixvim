@@ -1,4 +1,8 @@
-{ lib, pkgs, ... }:
+{
+  lib,
+  pkgs,
+  ...
+}:
 {
   plugins.conform-nvim.settings.formatters = {
     black.command = lib.getExe pkgs.black;

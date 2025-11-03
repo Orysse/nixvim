@@ -146,5 +146,4 @@
           options.desc = "Notification history";
         }
       ];
-
 }
