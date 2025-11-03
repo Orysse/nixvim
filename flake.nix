@@ -5,6 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    hercules-ci-effects.url = "github:hercules-ci/hercules-ci-effects";
+    tree-sitter-tiger = {
+      url = "github:ambroisie/tree-sitter-tiger";
+      flake = false;
+    };
   };
 
   outputs =
@@ -15,6 +20,12 @@
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.hercules-ci-effects.flakeModule
+        ./flake-modules/ci.nix
+        ./flake-modules/nixvim.nix
+      ];
+
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -23,30 +34,15 @@
       ];
 
       perSystem =
-        { system, ... }:
-        let
-          nixvimLib = nixvim.lib.${system};
-          nixvim' = nixvim.legacyPackages.${system};
-          nixvimModule = {
-            inherit system; # or alternatively, set `pkgs`
-            module = import ./config; # import the module directly
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
-            extraSpecialArgs = {
-              # inherit (inputs) foo;
-            };
-          };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
-        in
+        { pkgs, ... }:
         {
-          checks = {
-            # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+          devShells.default = pkgs.mkShell {
+            packages = with pkgs; [
+              nixfmt-rfc-style
+            ];
           };
 
-          packages = {
-            # Lets you run `nix run .` to start nixvim
-            default = nvim;
-          };
+          formatter = pkgs.nixfmt-rfc-style;
         };
     };
 }

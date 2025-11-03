@@ -90,6 +90,9 @@
       extraOptions = {
         settings = {
           yaml = {
+            customTags = [
+              "!reference sequence"
+            ];
             schemas = {
               kubernetes = "'*.yaml";
               "http://json.schemastore.org/github-workflow" = ".github/workflows/*";
@@ -103,10 +106,15 @@
                 "*docker-compose*.{yml,yaml}";
               "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" =
                 "*flow*.{yml,yaml}";
+              "https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json" =
+                "*.gitlab-ci.yml";
             };
           };
         };
       };
+    };
+    gitlab_ci_ls = {
+      enable = true;
     };
   };
   extraPlugins = with pkgs.vimPlugins; [

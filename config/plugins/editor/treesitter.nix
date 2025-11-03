@@ -9,7 +9,7 @@
     folding = false;
     nixvimInjections = true;
     grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars ++ [
-      # tree-sitter-tiger
+      tree-sitter-tiger
     ];
   };
 }
