@@ -8,5 +8,6 @@ _: {
     ./todo-comments.nix
     ./treesitter.nix
     ./undotree.nix
+    ./whichkey.nix
   ];
 }
