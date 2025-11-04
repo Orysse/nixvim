@@ -3,6 +3,7 @@ _: {
     ./comments.nix
     ./flash.nix
     ./mini.nix
+    ./nvim-ufo.nix
     ./render-markdown.nix
     ./tmux-navigator.nix
     ./todo-comments.nix

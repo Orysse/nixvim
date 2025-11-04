@@ -13,6 +13,12 @@
       shiftwidth = 4;
       expandtab = true;
 
+      foldcolumn = "0";
+      foldlevel = 99;
+      foldlevelstart = 99;
+      foldenable = true;
+      foldmethod = "indent";
+
       showtabline = 2;
 
       smartindent = true;

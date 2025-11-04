@@ -10,7 +10,7 @@
       indent.enable = true;
       highlight.enable = true;
     };
-    folding = false;
+    folding = true;
     nixvimInjections = true;
     grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars ++ [
       tree-sitter-tiger
