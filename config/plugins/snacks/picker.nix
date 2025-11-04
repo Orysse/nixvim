@@ -11,6 +11,7 @@
     settings = {
       picker = {
         enabled = true;
+        actions.__raw = lib.mkIf (config.plugins.trouble.enable) ''require("trouble.sources.snacks").actions'';
         formatters = {
           file = {
             filename_first = true;
@@ -18,6 +19,18 @@
         };
         matcher = {
           frecency = true;
+        };
+        win = {
+          input = {
+            keys.__raw = lib.mkIf (config.plugins.trouble.enable) ''
+              {
+                ["<c-t>"] = {
+                  "trouble_open",
+                  mode = { "n", "i" },
+                },
+              }
+            '';
+          };
         };
       };
     };
