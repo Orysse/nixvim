@@ -12,6 +12,7 @@
     alejandra.command = lib.getExe pkgs.alejandra;
 
     ormolu.command = lib.getExe pkgs.ormolu;
+    ocamlformat.command = lib.getExe pkgs.ocamlformat;
 
     prettierd.command = lib.getExe pkgs.prettierd;
     prettier.command = lib.getExe pkgs.nodePackages.prettier;

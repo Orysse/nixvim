@@ -8,6 +8,9 @@
       enable = true;
       installGhc = false;
     };
+    ocamllsp = {
+      enable = true;
+    };
     cmake = {
       enable = true;
     };

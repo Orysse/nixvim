@@ -23,6 +23,7 @@ _: {
     json = [ "jq" ];
     terraform = [ "terraform_fmt" ];
     bicep = [ "bicep" ];
+    ocaml = [ "ocamlformat" ];
     "_" = [ "trim_whitespace" ];
   };
 }
