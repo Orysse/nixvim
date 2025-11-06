@@ -24,7 +24,7 @@
             "n"
             "t"
           ];
-          key = "<C-/>";
+          key = "<leader>tt";
           action.__raw = ''
             function()
               Snacks.terminal(nil, { cmd = "zsh", win = { position = "bottom", height = 0.3 } })
