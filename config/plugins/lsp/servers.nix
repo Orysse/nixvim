@@ -10,6 +10,7 @@
     };
     ocamllsp = {
       enable = true;
+      package = null;
     };
     cmake = {
       enable = true;
