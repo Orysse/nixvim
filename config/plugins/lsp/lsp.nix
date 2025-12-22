@@ -1,5 +1,8 @@
 _: {
-  imports = [ ./servers.nix ];
+  imports = [
+    ./servers.nix
+    ./schemastore.nix
+  ];
   plugins = {
     lsp-lines = {
       enable = true;
