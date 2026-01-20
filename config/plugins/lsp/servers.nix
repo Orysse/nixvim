@@ -12,6 +12,11 @@
       enable = true;
       package = null;
     };
+    jdtls = {
+      enable = true;
+      package = null;
+    };
+
     cmake = {
       enable = true;
     };
