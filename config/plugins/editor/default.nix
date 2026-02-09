@@ -9,7 +9,7 @@ _: {
     ./todo-comments.nix
     ./treesitter.nix
     ./undotree.nix
-    ./vimtex.nix
+    # ./vimtex.nix
     ./whichkey.nix
   ];
 }
