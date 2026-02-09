@@ -10,10 +10,10 @@ _: {
           text = " ";
         };
         delete = {
-          text = " ";
+          text = "󰆴 ";
         };
         untracked = {
-          text = "";
+          text = " ";
         };
         topdelete = {
           text = "󱂥 ";
