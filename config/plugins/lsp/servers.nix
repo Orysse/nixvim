@@ -53,6 +53,9 @@
     nixd = {
       enable = true;
     };
+    tofu_ls = {
+      enable = true;
+    };
     ts_ls = {
       enable = true;
     };
