@@ -87,5 +87,6 @@ _: {
     vue = [ "eslint_d" ];
     svelte = [ "eslint_d" ];
     astro = [ "eslint_d" ];
+    nix = ["alejandra"];
   };
 }

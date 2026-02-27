@@ -19,7 +19,7 @@ _: {
       "shellharden"
       "shfmt"
     ];
-    nix = [ "nixfmt-rfc-style" ];
+    nix = [ "alejandra" ];
     json = [ "jq" ];
     terraform = [ "terraform_fmt" ];
     bicep = [ "bicep" ];
