@@ -14,7 +14,11 @@
 
       nixvimModule = {
         inherit system;
-        module = config.flake.modules.nixvim.all;
+        module = {
+          imports = [ config.flake.modules.nixvim.all ];
+          nixpkgs.config.allowUnfreePredicate =
+            pkg: builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "claude-code" ];
+        };
         extraSpecialArgs = {
           inherit tree-sitter-tiger;
         };
