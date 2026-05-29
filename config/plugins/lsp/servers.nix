@@ -14,6 +14,10 @@
     jdtls = {
       enable = true;
     };
+    powershell_es = {
+      enable = true;
+      bundle_path = "${pkgs.powershell-editor-services}";
+    };
     cmake = {
       enable = true;
     };
