@@ -7,6 +7,7 @@
     filetypes
     performance
     catppuccin
+    ai
     completion
     editor
     formatting
