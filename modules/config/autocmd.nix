@@ -1,0 +1,22 @@
+{
+  flake.modules.nixvim.autocmd = {
+    autoGroups = {
+      highlight_yank = { };
+      indentscope = { };
+    };
+    autoCmd = [
+      {
+        group = "highlight_yank";
+        event = [ "TextYankPost" ];
+        pattern = "*";
+        callback = {
+          __raw = ''
+            function()
+              vim.highlight.on_yank()
+            end
+          '';
+        };
+      }
+    ];
+  };
+}
