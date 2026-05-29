@@ -6,6 +6,7 @@
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
     hercules-ci-effects.url = "github:hercules-ci/hercules-ci-effects";
+    import-tree.url = "github:vic/import-tree";
     tree-sitter-tiger = {
       url = "github:ambroisie/tree-sitter-tiger";
       flake = false;
@@ -13,36 +14,6 @@
   };
 
   outputs =
-    {
-      nixvim,
-      flake-parts,
-      nixpkgs,
-      ...
-    }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [
-        inputs.hercules-ci-effects.flakeModule
-        ./flake-modules/ci.nix
-        ./flake-modules/nixvim.nix
-      ];
-
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-
-      perSystem =
-        { pkgs, ... }:
-        {
-          devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              nixfmt
-            ];
-          };
-
-          formatter = pkgs.nixfmt;
-        };
-    };
+    { flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
